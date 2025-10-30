@@ -42,8 +42,11 @@ bash
 streamlit run app.py
 
 
+
+
 Usage
 Individual Tweet Prediction
+
 
 Open the Streamlit app.
 Go to the Individual Prediction section.
