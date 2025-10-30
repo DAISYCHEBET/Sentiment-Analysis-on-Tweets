@@ -1,80 +1,97 @@
-Tweet Sentiment Analysis with LSTM
-This project is a complete sentiment analysis pipeline for tweets, built with TensorFlow/Keras, Streamlit, and a custom NLP preprocessing module. It classifies tweets into positive, neutral, or negative sentiments using a trained Bidirectional LSTM model and offers an interactive web interface for both single and batch predictions.
+Sentiment Analysis on Tweets
+Overview
 
-Project Overview
-Goal: Predict sentiment from tweets using deep learning and NLP.
+This project is a sentiment analysis system built to classify tweets as positive, negative, or neutral. Using deep learning techniques with LSTM (Long Short-Term Memory) networks, the model analyzes textual data and predicts the underlying sentiment. The project also includes a Streamlit web app for both individual tweet sentiment prediction and batch analysis of multiple tweets.
 
-Model: Bidirectional LSTM trained on lemmatized, tokenized tweet data.
-
-Interface: Streamlit app for real-time predictions and batch uploads.
-
-Preprocessing: Handles contractions, slang, stopwords, and lemmatization.
-
-Directory Structure
-Code
-├── app.py                  # Streamlit app
-├── sentiment_lstm.keras   # Trained LSTM model
-├── tokenizer.pkl          # Tokenizer used during training
-├── preprocessing.py       # Text cleaning and lemmatization
-├── requirements.txt       # Python dependencies
+This repository demonstrates the full pipeline from data preprocessing and model training to deploying an interactive application.
 
 
 
-Setup Instructions:
+Features
+
+Data Preprocessing:
+
+Text cleaning, tokenization, and padding for consistent input shapes.
+Handling of emojis, hashtags, and special characters.
+
+
+Model:
+
+LSTM neural network for sequential text analysis.
+Trained on labeled tweet data for sentiment classification.
+Saves the trained model for reuse in the Streamlit app.
+
+
+
+Streamlit Web App:
+
+Individual Prediction: Input a single tweet to get sentiment probability and label.
+Batch Prediction: Upload a CSV or Excel file of tweets for sentiment analysis of multiple entries.
+Visualizations: Sentiment distribution charts for uploaded datasets.
+
+
+
+Installation
+
 Clone the repository
 
-install dependencies:
-bash
+
+Install dependencies:
 pip install -r requirements.txt
+
 
 Run the Streamlit app:
 bash
 streamlit run app.py
 
 
+Usage
+Individual Tweet Prediction
 
-Model Details
-Tokenizer: Top 10,000 words, padded to 50 tokens
+Open the Streamlit app.
+Go to the Individual Prediction section.
+Input a single tweet and click Predict.
+View the sentiment label and probability.
 
-Embedding: 100-dimensional vectors learned during training
-
-
-
-Architecture:
-
-Embedding layer
-
-Bidirectional LSTM (128 units)
-
-Dense layers with ReLU and Dropout
-
-Softmax output for 3-class classification
-
-
-
-Training Techniques:
-
-Class weights to handle imbalance
-
-EarlyStopping to prevent overfitting
-
-Validation split for monitoring generalization
-
-
-
-App Features
-Single Tweet Prediction
-Input a tweet manually
-
-View cleaned text, predicted sentiment, and confidence scores
-
-Emoji feedback and probability bar chart
 
 Batch Prediction
-Upload .csv or .xlsx file with tweets
 
-Select text column and set uncertainty threshold
+Go to the Batch Prediction section.
+Upload a CSV or Excel file containing tweets.
+The app will process all tweets and show a sentiment distribution chart.
+Download the prediction results if needed.
 
-Stream predictions with progress bar
 
-Filter results and download as CSV or Excel
+Project Structure
+├── app.py                  # Streamlit application
+├── preprocessing.py        # Text preprocessing functions
+├── model/                  # Saved trained LSTM model
+├── data/                   # Sample datasets
+├── requirements.txt        # Python dependencies
+├── README.md               # Project documentation
+
+
+
+Dependencies
+
+Python 3.10+
+TensorFlow / Keras
+Streamlit
+Pandas, Numpy
+Joblib
+Matplotlib/Seaborn (for visualizations)
+
+
+
+
+Future Improvements
+
+Improve model performance using regularization 
+
+Experiment with transformer-based models (e.g., BERT) for improved accuracy.
+
+Add multilingual support for tweets in other languages.
+
+
+Author:
+Daisy  Chebet
