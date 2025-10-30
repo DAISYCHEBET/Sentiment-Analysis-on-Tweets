@@ -3,9 +3,6 @@ Overview
 
 This project is a sentiment analysis system built to classify tweets as positive, negative, or neutral. Using deep learning techniques with LSTM (Long Short-Term Memory) networks, the model analyzes textual data and predicts the underlying sentiment. The project also includes a Streamlit web app for both individual tweet sentiment prediction and batch analysis of multiple tweets.
 
-This repository demonstrates the full pipeline from data preprocessing and model training to deploying an interactive application.
-
-
 
 Features
 
