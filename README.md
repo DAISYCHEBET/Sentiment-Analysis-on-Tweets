@@ -1,18 +1,18 @@
 # Sentiment Analysis on Tweets
-Overview
+## Overview
 
 This project is a sentiment analysis system built to classify tweets as positive, negative, or neutral. Using deep learning techniques with LSTM (Long Short-Term Memory) networks, the model analyzes textual data and predicts the underlying sentiment. The project also includes a Streamlit web app for both individual tweet sentiment prediction and batch analysis of multiple tweets.
 
 
-Features
+## Features
 
-Data Preprocessing:
+### Data Preprocessing:
 
 Text cleaning, tokenization, and padding for consistent input shapes.
 Handling of emojis, hashtags, and special characters.
 
 
-Model:
+### Model:
 
 LSTM neural network for sequential text analysis.
 Trained on labeled tweet data for sentiment classification.
@@ -20,7 +20,7 @@ Saves the trained model for reuse in the Streamlit app.
 
 
 
-Streamlit Web App:
+ ### Streamlit Web App:
 
 Individual Prediction: Input a single tweet to get sentiment probability and label.
 Batch Prediction: Upload a CSV or Excel file of tweets for sentiment analysis of multiple entries.
@@ -28,7 +28,7 @@ Visualizations: Sentiment distribution charts for uploaded datasets.
 
 
 
-Installation
+## Installation
 
 Clone the repository
 
@@ -44,7 +44,7 @@ streamlit run app.py
 
 
 
-Usage
+## Usage
 Individual Tweet Prediction
 
 
@@ -54,7 +54,7 @@ Input a single tweet and click Predict.
 View the sentiment label and probability.
 
 
-Batch Prediction
+## Batch Prediction
 
 Go to the Batch Prediction section.
 Upload a CSV or Excel file containing tweets.
@@ -72,7 +72,7 @@ Project Structure
 
 
 
-Dependencies
+## Dependencies
 
 Python 3.10+
 TensorFlow / Keras
@@ -84,7 +84,7 @@ Matplotlib/Seaborn (for visualizations)
 
 
 
-Future Improvements
+## Future Improvements
 
 Improve model performance using regularization 
 
